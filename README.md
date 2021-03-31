@@ -1,2 +1,3 @@
-# ml-tools-project
-Contextual Bandit Policy Comparison
+# ML Tools Project
+
+## Contextual Bandit Policy Comparison
