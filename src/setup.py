@@ -110,10 +110,23 @@ def download_data():
             shutil.rmtree(git_data+k)
             Path(dataset_zip).unlink()
         print(f'{k} dataset extracted & excess files removed')
+
+def test_contextualbandits():
+    import numpy
+    assert numpy.__version__[:4]=='1.20', 'numpy should be at least 1.20'
+
+    try:
+        import contextualbandits
+    except:
+        print("contextualbandits import failed")
+        print("try: pip install contextualbandits")
+    else:
+        print("contextualbandits installed and functional")
             
 def main():
     print(f'storing data to: {get_data_path()}')
     download_data()
+    test_contextualbandits()
     
 if __name__ == "__main__":
     main()
