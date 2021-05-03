@@ -112,9 +112,6 @@ def download_data():
         print(f'{k} dataset extracted & excess files removed')
 
 def test_contextualbandits():
-    import numpy
-    assert numpy.__version__[:4]=='1.20', 'numpy should be at least 1.20'
-
     try:
         import contextualbandits
     except:
